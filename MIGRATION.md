@@ -545,7 +545,7 @@ Key changes:
 - All Angular packages in peerDependencies now require `>=21.0.0 < 23.0.0`
 - `@angular-devkit/architect` now requires `>=0.2100.0 < 0.2300.0`
 - The RxJS requirement is now `^7.4.0`
-- Standalone components are always treated as the default in `@storybook/angular`; the runtime `>= 19` standalone check was removed
+- Standalone components are always treated as the default in `@storybook/angular`
 
 ## From version 10.5.x to 10.6.0
 
