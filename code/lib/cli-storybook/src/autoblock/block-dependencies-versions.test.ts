@@ -50,7 +50,7 @@ test('@angular/core 20 is blocked with message and migration anchor', async () =
   });
 
   const log = blocker.log(result);
-  expect(log.title).toBe('Angular 21 support removed');
+  expect(log.title).toBe('Require Angular v21 and up');
   expect(log.message).toContain('Support for Angular < 21 has been removed.');
   expect(log.link).toBe(
     'https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#angular-require-v21-and-up'
