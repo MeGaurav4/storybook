@@ -1,5 +1,8 @@
 <h1>Migration</h1>
 
+- [From version 10.6.0 to 11.0.0](#from-version-1060-to-1100)
+  - [Create React App support removed](#create-react-app-support-removed)
+
 - [From version 10.5.x to 10.6.0](#from-version-105x-to-1060)
   - [Vue 3: `vue-docgen-api` is deprecated](#vue-3-vue-docgen-api-is-deprecated)
   - [Experimental Playwright CT integration removed](#experimental-playwright-ct-integration-removed)
@@ -529,6 +532,14 @@
   - [Webpack upgrade](#webpack-upgrade)
   - [Packages renaming](#packages-renaming)
   - [Deprecated embedded addons](#deprecated-embedded-addons)
+
+## From version 10.6.0 to 11.0.0
+
+### Create React App support removed
+
+Create React App projects are no longer supported. Storybook 11 no longer publishes `@storybook/preset-create-react-app`, `storybook init` stops with an error on projects using `react-scripts`, and `storybook upgrade` blocks upgrading while `react-scripts` is installed.
+
+To keep using Storybook, migrate your project off Create React App first (for example, to [Vite](https://vite.dev/guide/)), remove the `react-scripts` dependency, then run `npx storybook@latest init` again.
 
 ## From version 10.5.x to 10.6.0
 
