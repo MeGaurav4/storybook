@@ -1,5 +1,8 @@
 <h1>Migration</h1>
 
+- [From version 10.6.0 to 11.0.0](#from-version-1060-to-1100)
+  - [Angular: Require v21 and up](#angular-require-v21-and-up)
+
 - [From version 10.5.x to 10.6.0](#from-version-105x-to-1060)
   - [Vue 3: `vue-docgen-api` is deprecated](#vue-3-vue-docgen-api-is-deprecated)
   - [Experimental Playwright CT integration removed](#experimental-playwright-ct-integration-removed)
@@ -528,6 +531,21 @@
   - [Webpack upgrade](#webpack-upgrade)
   - [Packages renaming](#packages-renaming)
   - [Deprecated embedded addons](#deprecated-embedded-addons)
+
+## From version 10.6.0 to 11.0.0
+
+### Angular: Require v21 and up
+
+Storybook has dropped support for Angular versions 18-20. The minimum supported version is now Angular 21.
+
+If you're using an older version of Angular, you'll need to upgrade to Angular 21 or newer to use the latest version of Storybook.
+
+Key changes:
+
+- All Angular packages in peerDependencies now require `>=21.0.0 < 23.0.0`
+- `@angular-devkit/architect` now requires `>=0.2100.0 < 0.2300.0`
+- The RxJS requirement is now `^7.4.0`
+- Standalone components are always treated as the default in `@storybook/angular`; the runtime `>= 19` standalone check was removed
 
 ## From version 10.5.x to 10.6.0
 
