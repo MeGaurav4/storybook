@@ -22,14 +22,15 @@ vi.mock('storybook/internal/node-logger', () => ({
 
 type ModulePackageJSON = Awaited<ReturnType<JsPackageManager['getModulePackageJSON']>>;
 
-const makeOptions = (packages: Record<string, string | undefined>): AutoblockOptions => ({
-  packageManager: {
-    getModulePackageJSON: async (packageName: string): Promise<ModulePackageJSON> => {
-      const version = packages[packageName];
-      return version ? { version } : null;
-    },
-  } as JsPackageManager,
-} as AutoblockOptions);
+const makeOptions = (packages: Record<string, string | undefined>): AutoblockOptions =>
+  ({
+    packageManager: {
+      getModulePackageJSON: async (packageName: string): Promise<ModulePackageJSON> => {
+        const version = packages[packageName];
+        return version ? { version } : null;
+      },
+    } as JsPackageManager,
+  }) as AutoblockOptions;
 
 beforeEach(() => {
   vi.clearAllMocks();
