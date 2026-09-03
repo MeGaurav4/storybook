@@ -23,13 +23,12 @@ vi.mock('storybook/internal/node-logger', () => ({
     logBox: vi.fn((value: unknown) => value),
   },
 }));
-
 const mockPackageManager = {
   getModulePackageJSON: vi.fn<JsPackageManager['getModulePackageJSON']>(),
-} as unknown as JsPackageManager;
+};
 
 const baseOptions = {
-  packageManager: mockPackageManager,
+  packageManager: mockPackageManager as unknown as JsPackageManager,
   mainConfig: { stories: [] },
   mainConfigPath: '.storybook/main.ts',
   configDir: '.storybook',
